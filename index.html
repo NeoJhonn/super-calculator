@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet">
+    <title>Super Calculadora</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-calc">
+        <h1>Super Calculadora</h1>
+
+        <label for="number-a">Número A:</label>
+        <input type="number" name="number-a" id="number-a">
+
+        <label for="number-b">Numero B:</label>
+        <input type="number" name="number-b" id="number-b">
+
+        <button id="calcular">Calcular</button>
+
+      </div>
+      
+      <div class="main-results">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <h6>Soma</h6>
+                <p id="soma">0</p>
+              </td>
+              <td>
+                <h6>Subtração A - B</h6>
+                <p id="subtAB">0</p>
+              </td>
+              <td>
+                <h6>Subtração B - A</h6>
+                <p id="subtBA">0</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h6>Multiplicação</h6>
+                <p id="multiplic">0</p>
+              </td>
+              <td>
+                <h6>Divisão A / B</h6>
+                <p id="divAB">0</p>
+              </td>
+              <td>
+                <h6>Divisão B / A</h6>
+                <p id="divBA">0</p>
+              </td>
+            </tr><tr>
+              <td>
+                <h6>Potência de A na base B</h6>
+                <p id="powAB">0</p>
+              </td>
+              <td>
+                <h6>Potência de B na base A</h6>
+                <p id="powBA">0</p>
+              </td>
+              <td>
+                <h6>Raiz quadrada de A</h6>
+                <p id="raizA">0</p>
+              </td>
+            </tr><tr>
+              <td>
+                <h6>Raiz quadrada de B</h6>
+                <p id="raizB">0</p>
+              </td>
+              <td>
+                <h6>Fatorial de A</h6>
+                <p id="fatA">0</p>
+              </td>
+              <td>
+                <h6>Fatorial de B</h6>
+                <p id="fatB">0</p>
+              </td>
+            </tr><tr>
+              <td>
+                <h6>Porcentagem de A em relação a B</h6>
+                <p><span id="percentAB">0</span>%</p>
+              </td>
+              <td>
+                <h6>Porcentagem de B em relação a A</h6>
+                <p><span id="percentBA">0</span>%</p>
+              </td>
+              <td>
+                <h6>Média</h6>
+                <p id="media">0</p>
+              </td>
+          </tbody>
+        </table>
+      </div>
+      
+
+    </main>
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>
