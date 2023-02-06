@@ -12,7 +12,7 @@ function calcular(){
 
   //verificar se há valores digitados nos inputs
   if(a === 0 || b === 0){
-    console.log('Digite um valor para A e B')
+    alert('Digite um valor para A ou B')
     return
   }
 
@@ -76,21 +76,21 @@ function calcular(){
 
   //Fatorial de B
   var fatB = 1
-  for(var i=1; i > 1; i--){
+  for(var i=b; i > 1; i--){
     fatB = fatB * i
   }
   //setar o valor na interface
   document.querySelector('#fatB').textContent = fatB;
 
   //porcentagem de A em relação a B
-  var percentAB =  divBA.toFixed(2) * 100
+  var percentAB =  divAB.toFixed(2) * 100
   //setar o valor na interface
   document.querySelector('#percentAB').textContent = percentAB;
 
   //porcentagem de B em relação a A
-  var percentBA =  (a * 100) / 2
+  var percentBA =  divBA.toFixed(2) * 100
   //setar o valor na interface
-  document.querySelector('#percentBA').textContent = percentBA.toFixed(0);
+  document.querySelector('#percentBA').textContent = percentBA;
 
   //média
   var media = (a + b) / 2
