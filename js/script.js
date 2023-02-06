@@ -2,17 +2,49 @@
 var button = document.querySelector('#calcular');
 button.addEventListener('click', calcular);
 
+//Validaçaõ do número A, valore entre -100 e 100
+document.querySelector('#number-a').addEventListener('input', e=>{
+  const el = e.target || e
+
+  if(el.type == "number" && el.max && el.min ){
+    let value = parseInt(el.value)
+    el.value = value // for 000 like input cleanup to 0
+    let max = parseInt(el.max)
+    let min = parseInt(el.min)
+    if ( value > max ) el.value = el.max
+    if ( value < min ) el.value = el.min
+  }
+});
+
+//Validaçaõ do número B, valore entre -100 e 100
+document.querySelector('#number-b').addEventListener('input', e=>{
+  const el = e.target || e
+
+  if(el.type == "number" && el.max && el.min ){
+    let value = parseInt(el.value)
+    el.value = value // for 000 like input cleanup to 0
+    let max = parseInt(el.max)
+    let min = parseInt(el.min)
+    if ( value > max ) el.value = el.max
+    if ( value < min ) el.value = el.min
+  }
+});
+
 
 //Calcular as 15 operções
 function calcular(){
+  //limpar as variáveis a cada nova chamada
+  var a = 0
+  var b = 0
+
   //pegar os valore nos inputs
   /*Faz o cast com o Number, pois se trata de números */
-  var a = Number(document.querySelector('#number-a').value);
-  var b = Number(document.querySelector('#number-b').value);
+  a = Number(document.querySelector('#number-a').value);
+  b = Number(document.querySelector('#number-b').value);
 
   //verificar se há valores digitados nos inputs
   if(a === 0 || b === 0){
-    alert('Digite um valor para A ou B')
+    console.error('Digite um valor para A ou B')
     return
   }
 
